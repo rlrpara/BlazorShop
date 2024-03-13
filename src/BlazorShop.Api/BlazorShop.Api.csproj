@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>api-doc.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BalzorShop.CrossCutting.Swagger\BlazorShop.CrossCutting.Swagger.csproj" />
+    <ProjectReference Include="..\BlazorShop.CrossCutting.Auth\BlazorShop.CrossCutting.Auth.csproj" />
+    <ProjectReference Include="..\BlazorShop.CrossCutting.Iot\BlazorShop.CrossCutting.Iot.csproj" />
+    <ProjectReference Include="..\BlazorShop.Infra.Database\BlazorShop.Infra.Database.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="api-doc.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BlazorShop.Api</name>
+    </assembly>
+    <members>
+        <member name="M:BlazorShop.Api.Controllers.UsuarioController.GetObterTodos">
+            <summary>
+            Obtem todos os registros
+            </summary>
+            <response code="200">Retorna com sucesso os dados</response>
+            <response code="401">Retorna requisição não autorizada</response>
+        </member>
+        <member name="M:BlazorShop.Api.Controllers.UsuarioController.GetObterPorId(System.Int32)">
+            <summary>
+            Obtem um registro baseado no ID do mesmo
+            </summary>
+            <param name="id">Filtro ID </param>
+            <response code="200">Retorna com sucesso o registro</response>
+            <response code="401">Retorna requisição não autorizada</response>
+        </member>
+        <member name="M:BlazorShop.Api.Controllers.UsuarioController.Adicionar(BlazorShop.Service.ViewModel.UsuarioViewModel)">
+             <summary>
+             Insere um novo registro
+             </summary>
+             <remarks>
+             Campos obrigatórios:
+            
+                 {
+                     "nome": "Novo usuario",
+                     "email": "email@gmail.com",
+                     "senha": "senhateste122355",
+                     "admin": false,
+                     "dataCadastro": "2023-09-08T14:42:43.473Z",
+                     "dataAtualizacao": "2023-09-08T14:42:43.473Z",
+                     "ativo": true
+                 }
+            
+             </remarks>
+             <param name="model">Dados disponíveis para o usuário da API preencher</param>
+             <response code="201">Registro criado com sucesso!</response>
+             <response code="400">Retorna requisição mal sucedida com feedback</response>
+             <response code="401">Retorna requisição não autorizada</response>
+        </member>
+        <member name="M:BlazorShop.Api.Controllers.UsuarioController.Atualizar(BlazorShop.Service.ViewModel.UsuarioViewModel)">
+            <summary>
+            Atualiza um registro
+            </summary>
+            <remarks>
+            Campos obrigatórios:
+                
+                {
+                    "Descricao": ""
+                }
+            
+                OBS: campos não utilizados onde existe dado no registro do banco, o mesmo será apagado
+            </remarks>
+            <param name="model">Dados disponíveis para atualização</param>
+            <response code="200">Registro atualizado com sucesso!</response>
+            <response code="400">Retorna requisição mal sucedida com feedback</response>
+            <response code="401">Retorna requisição não autorizada</response>
+        </member>
+        <member name="M:BlazorShop.Api.Controllers.UsuarioController.Delete(System.Nullable{System.Int32})">
+            <summary>
+            Remove um registro baseado no ID do mesmo
+            </summary>
+            <param name="id">Filtro ID </param>
+            <response code="200">Registro removido com sucesso</response>
+            <response code="400">Retorna requisição mal sucedida</response>
+            <response code="401">Retorna requisição não autorizada</response>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorShop.CrossCuttin.Util\BlazorShop.CrossCuttin.Util.csproj" />
+    <ProjectReference Include="..\BlazorShop.CrossCutting.Auth\BlazorShop.CrossCutting.Auth.csproj" />
+    <ProjectReference Include="..\BlazorShop.Domain\BlazorShop.Domain.csproj" />
+    <ProjectReference Include="..\BlazorShop.Infra.Data\BlazorShop.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
