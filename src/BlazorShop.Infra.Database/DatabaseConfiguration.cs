@@ -5,6 +5,7 @@ using BlazorShop.Infra.Data.Interface;
 using BlazorShop.Infra.Data.Repositories;
 using BlazorShop.Infra.Database.Interface;
 using Dapper;
+using Org.BouncyCastle.Crypto.Digests;
 using System.Data;
 using System.Text;
 
@@ -183,8 +184,8 @@ public class DatabaseConfiguration : DatabaseConfigurationBase, IDatabaseConfigu
     {
         Criar(ObterProcedureDropConstraint());
 
-        Criar(_geradorDapper.CriarTabela<Produtos>());
         Criar(_geradorDapper.CriarTabela<Categoria>());
+        Criar(_geradorDapper.CriarTabela<Produtos>());
         Criar(_geradorDapper.CriarTabela<Usuario>());
         Criar(_geradorDapper.CriarTabela<Carrinho>());
         Criar(_geradorDapper.CriarTabela<CarrinhoItem>());
@@ -194,7 +195,13 @@ public class DatabaseConfiguration : DatabaseConfigurationBase, IDatabaseConfigu
         if (!ExisteDados<Usuario>())
             Criar(_geradorDapper.GeralSqlInsertControlesMultiplos(ObterUsuarioPadrao()), false);
 
+        if (!ExisteDados<Categoria>())
+            Criar(_geradorDapper.GeralSqlInsertControlesMultiplos(ObterCategoria()), false);
+
+        if (!ExisteDados<Produtos>())
+            Criar(_geradorDapper.GeralSqlInsertControlesMultiplos(ObterProdutos()), false);
     }
+
     private bool ServidorAtivo()
     {
         try

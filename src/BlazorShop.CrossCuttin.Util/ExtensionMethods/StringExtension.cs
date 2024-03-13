@@ -57,8 +57,11 @@ public static class StringExtension
         else
             return Convert.ToDateTime(string.IsNullOrWhiteSpace(dataPadrao) ? "01/01/1900" : dataPadrao);
     }
-    public static bool DataValida(this string data)
+    public static bool DataValida(this string? data)
     {
+        if (string.IsNullOrWhiteSpace(data))
+            return false;
+
         Regex ok = new(@"(\d{2}\/\d{2}\/\d{4})", RegexOptions.None, TimeSpan.FromMilliseconds(100));
 
         if (ok.Match(data).Success)

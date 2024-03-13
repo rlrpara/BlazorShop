@@ -39,7 +39,7 @@ public class LoginService : BaseService, ILoginService
 
         var usuario = _repository.Logar(_mapper.Map<Login>(ObterLogin(login))).Result;
 
-        if (usuario is null || !usuario.Ativo)
+        if (usuario is null || !(usuario.Ativo??false))
             return null;
 
         return new UsuarioAuthenticateResponseModel(_mapper.Map<LoginViewModel>(usuario), TokenService.GenerateToken(usuario));
