@@ -32,6 +32,7 @@ public class GeradorDapper : IGeradorDapper
         "Int32" => ObtemParaInteiro(),
         "Int64" => "bigint DEFAULT NULL",
         "Double" => "decimal(18,2)",
+        "Decimal" => "decimal(18,2)",
         "Single" => "float",
         "DateTime" => ObterParaData(),
         "Boolean" => ObtemParaBoleando(),
@@ -102,7 +103,7 @@ public class GeradorDapper : IGeradorDapper
             return $"'{x.GetValue(entidade)?.ToString()}'";
         else if (propriedade.Contains("datetime"))
             return $"{(string.IsNullOrWhiteSpace(x.GetValue(entidade)?.ToString()) ? "null" : $"'{Convert.ToDateTime(x.GetValue(entidade)):yyyy-MM-dd HH:mm:ss}'")}";
-        else if (propriedade.Contains("double"))
+        else if (propriedade.Contains("double") || propriedade.Contains("decimal"))
             return $"{(string.IsNullOrWhiteSpace(x.GetValue(entidade)?.ToString()) ? "null" : x.GetValue(entidade))}".Replace(".", "").Replace(",", ".");
         else if (propriedade.Contains("nullable`1"))
             if (x.PropertyType.FullName.ToLower().Contains("datetime"))

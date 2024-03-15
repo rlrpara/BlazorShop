@@ -18,20 +18,25 @@ public class DatabaseConfigurationBase
             Ativo = true,
         },
     ];
-
     public IEnumerable<Categoria> ObterCategoria() =>
     [
         new()
         {
-            Codigo = 1,
             Nome = "Beleza",
+            IconCSS = "fas fa-spa",
+            DataCadastro = DateTime.Now,
+            DataAtualizacao = DateTime.Now,
+            Ativo = true
+        },
+        new()
+        {
+            Nome = "Alimentos",
             IconCSS = "fas fa-spa",
             DataCadastro = DateTime.Now,
             DataAtualizacao = DateTime.Now,
             Ativo = true
         }
     ];
-
     public IEnumerable<Produtos> ObterProdutos() =>
     [
         new Produtos()
@@ -45,6 +50,45 @@ public class DatabaseConfigurationBase
             DataCadastro = DateTime.Now,
             DataAtualizacao = DateTime.Now,
             Ativo = true
+        },
+        new Produtos()
+        {
+            Nome = "Coca-Cola",
+            Descricao = "Descrição da coca-cola",
+            ImagemUrl = "/imagens/beleza/coca-cola1.png",
+            Preco = 7,
+            Quantidade = 300,
+            CodigoCategoria = 2,
+            DataCadastro = DateTime.Now,
+            DataAtualizacao = DateTime.Now,
+            Ativo = true
         }
     ];
+    public IEnumerable<Carrinho> ObterCarrinho() =>
+    [
+        new Carrinho()
+        {
+            CodigoUsuario = 1,
+            Ativo = true,
+            DataCadastro = DateTime.Now,
+            DataAtualizacao = DateTime.Now,
+        }
+    ];
+    public IEnumerable<CarrinhoItem> ObterCarrinhoItem() => new List<CarrinhoItem>()
+    {
+        new()
+        {
+            CodigoCarrinho = 1,
+            CodigoProduto = 1,
+            Quantidade = 1,
+            Ativo = true,
+        },
+        new()
+        {
+            CodigoCarrinho = 1,
+            CodigoProduto = 2,
+            Quantidade = 5,
+            Ativo = true,
+        }
+    };
 }

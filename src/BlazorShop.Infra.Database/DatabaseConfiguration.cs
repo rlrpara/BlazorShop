@@ -200,8 +200,13 @@ public class DatabaseConfiguration : DatabaseConfigurationBase, IDatabaseConfigu
 
         if (!ExisteDados<Produtos>())
             Criar(_geradorDapper.GeralSqlInsertControlesMultiplos(ObterProdutos()), false);
-    }
 
+        if (!ExisteDados<Carrinho>())
+            Criar(_geradorDapper.GeralSqlInsertControlesMultiplos(ObterCarrinho()), false);
+
+        if (!ExisteDados<CarrinhoItem>())
+            Criar(_geradorDapper.GeralSqlInsertControlesMultiplos(ObterCarrinhoItem()), false);
+    }
     private bool ServidorAtivo()
     {
         try

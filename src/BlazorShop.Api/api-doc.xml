@@ -4,7 +4,7 @@
         <name>BlazorShop.Api</name>
     </assembly>
     <members>
-        <member name="M:BlazorShop.Api.Controllers.CarrinhoController.GetObterTodos">
+        <member name="M:BlazorShop.Api.Controllers.CarrinhoController.GetObterTodos(BlazorShop.Service.ViewModel.filtroCarrinhoViewModel)">
             <summary>
             Obtem todos os registros
             </summary>

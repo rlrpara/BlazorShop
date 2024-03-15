@@ -8,5 +8,5 @@ public interface ICarrinhoRepository : IBaseRepository
     Task<bool> Atualizar(Carrinho Carrinho);
     Task<Carrinho> ObterPorCodigo(int codigo);
     Task<Carrinho> ObterPorDescricao(string descricao);
-    Task<IEnumerable<Carrinho>> ObterTodosAsync();
+    Task<IEnumerable<dadosCarrinhoCompras>> ObterTodosAsync(filtroCarrinho filtro);
 }

@@ -15,6 +15,7 @@ public static class NativeInjector
         services.AddTransient<IBaseService, BaseService>();
         services.AddTransient<IUsuarioService, UsuarioService>();
         services.AddTransient<ILoginService, LoginService>();
+        services.AddTransient<ICarrinhoService, CarrinhoService>();
         #endregion
 
         #region Repositories
@@ -24,6 +25,7 @@ public static class NativeInjector
         services.AddTransient<ICategoriaRepository, CategoriaRepository>();
         services.AddTransient<IProdutoRepository, ProdutoRepository>();
         services.AddTransient<ILoginRepository, LoginRepository>();
+        services.AddTransient<ICarrinhoRepository, CarrinhoRepository>();
         #endregion
     }
 }

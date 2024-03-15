@@ -24,30 +24,10 @@ public class CarrinhoService : BaseService, ICarrinhoService
     #endregion
 
     #region [Public Methods]
-    public IEnumerable<CarrinhoViewModel> ObterTodos()
-        =>  _mapper.Map<IEnumerable<CarrinhoViewModel>>(_carrinhoRepository.ObterTodosAsync().Result);
+    public IEnumerable<CarrinhoComprasViewModel> ObterTodos(filtroCarrinhoViewModel filtro)
+        => _mapper.Map<IEnumerable<CarrinhoComprasViewModel>>(_carrinhoRepository.ObterTodosAsync(_mapper.Map<filtroCarrinho>(filtro)).Result);
     public CarrinhoViewModel ObterPorId(int codigoCarrinho)
-    {
-        var carrinho = _mapper.Map<CarrinhoViewModel>(_carrinhoRepository.ObterPorCodigo(codigoCarrinho).Result);
-
-        foreach (var item in collection)
-        {
-
-        }
-
-        var lista = new CarrinhoViewModel()
-        {
-            Codigo = 1,
-            CodigoUsuario = 1,
-            ListaCarrinhoItem = new CarrinhoItemViewModel()
-            {
-
-            }
-        }
-
-
-        return _mapper.Map<CarrinhoViewModel>(_carrinhoRepository.ObterPorCodigo(codigoCarrinho).Result);
-    }
+        => _mapper.Map<CarrinhoViewModel>(_carrinhoRepository.ObterPorCodigo(codigoCarrinho).Result);
     public bool Adicionar(CarrinhoViewModel model)
     {
         model.DataCadastro = DateTime.Now;

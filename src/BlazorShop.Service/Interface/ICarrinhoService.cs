@@ -4,7 +4,7 @@ namespace BlazorShop.Service.Interface;
 
 public interface ICarrinhoService : IBaseService
 {
-    IEnumerable<CarrinhoViewModel> ObterTodos();
+    IEnumerable<CarrinhoComprasViewModel> ObterTodos(filtroCarrinhoViewModel filtro);
     CarrinhoViewModel ObterPorId(int codigo);
     bool Adicionar(CarrinhoViewModel model);
     bool Alterar(CarrinhoViewModel model);
