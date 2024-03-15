@@ -35,17 +35,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06.01 - Auth", "06.01 - Aut
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06.02 - Swagger", "06.02 - Swagger", "{2C1B2D48-8206-4238-A918-B24D9A842875}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorShop.CrossCutting.Swagger", "src\BalzorShop.CrossCutting.Swagger\BlazorShop.CrossCutting.Swagger.csproj", "{6EE59117-729B-4EDF-A41E-CA31A02F9609}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShop.CrossCutting.Swagger", "src\BalzorShop.CrossCutting.Swagger\BlazorShop.CrossCutting.Swagger.csproj", "{6EE59117-729B-4EDF-A41E-CA31A02F9609}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06.03 - Iot", "06.03 - Iot", "{A8CF226D-EDB5-4A42-A888-749FE1748759}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorShop.CrossCutting.Iot", "src\BlazorShop.CrossCutting.Iot\BlazorShop.CrossCutting.Iot.csproj", "{0311638F-CBC6-4363-B398-D5534F59FD81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShop.CrossCutting.Iot", "src\BlazorShop.CrossCutting.Iot\BlazorShop.CrossCutting.Iot.csproj", "{0311638F-CBC6-4363-B398-D5534F59FD81}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06.04 - Util", "06.04 - Util", "{150A2941-6E85-422F-B093-E0F00E315843}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorShop.CrossCuttin.Util", "src\BlazorShop.CrossCuttin.Util\BlazorShop.CrossCuttin.Util.csproj", "{5EE659E2-9B9F-453F-8690-7244D6781155}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShop.CrossCuttin.Util", "src\BlazorShop.CrossCuttin.Util\BlazorShop.CrossCuttin.Util.csproj", "{5EE659E2-9B9F-453F-8690-7244D6781155}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorShop.CrossCutting.Auth", "src\BlazorShop.CrossCutting.Auth\BlazorShop.CrossCutting.Auth.csproj", "{5362F19C-26DC-4C0D-80F4-52FD497F7659}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShop.CrossCutting.Auth", "src\BlazorShop.CrossCutting.Auth\BlazorShop.CrossCutting.Auth.csproj", "{5362F19C-26DC-4C0D-80F4-52FD497F7659}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorShop.ServiceWeb", "src\BlazorShop.ServiceWeb\BlazorShop.ServiceWeb.csproj", "{249044B8-8104-49AC-BD4A-E4902D0FE3F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{5362F19C-26DC-4C0D-80F4-52FD497F7659}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5362F19C-26DC-4C0D-80F4-52FD497F7659}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5362F19C-26DC-4C0D-80F4-52FD497F7659}.Release|Any CPU.Build.0 = Release|Any CPU
+		{249044B8-8104-49AC-BD4A-E4902D0FE3F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{249044B8-8104-49AC-BD4A-E4902D0FE3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{249044B8-8104-49AC-BD4A-E4902D0FE3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{249044B8-8104-49AC-BD4A-E4902D0FE3F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -114,6 +120,7 @@ Global
 		{150A2941-6E85-422F-B093-E0F00E315843} = {5EEBE934-6D1E-4BC7-B78E-61B56E467A72}
 		{5EE659E2-9B9F-453F-8690-7244D6781155} = {150A2941-6E85-422F-B093-E0F00E315843}
 		{5362F19C-26DC-4C0D-80F4-52FD497F7659} = {7E0E3150-1DC6-4704-8F65-364CF62FA67E}
+		{249044B8-8104-49AC-BD4A-E4902D0FE3F2} = {A3F13739-99C3-415E-8938-5295B0215411}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A23F51CB-A621-4D67-85CB-E04D0075A4FA}

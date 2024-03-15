@@ -26,9 +26,17 @@ public class CarrinhoController : ControllerBase
     /// </summary>
     /// <response code="200">Retorna com sucesso os dados</response>
     /// <response code="401">Retorna requisição não autorizada</response>
+    /// <response code="404">Retorna requisição sem dados</response>
     [HttpPost("ObterTodos")]
     public IActionResult GetObterTodos(filtroCarrinhoViewModel filtro)
-        => Ok(_service.ObterTodos(filtro));
+    {
+        var resultado = _service.ObterTodos(filtro);
+
+        if(resultado.Count() == 0)
+            return NotFound();
+
+        return Ok(resultado);
+    }
 
     /// <summary>
     /// Obtem um registro baseado no ID do mesmo

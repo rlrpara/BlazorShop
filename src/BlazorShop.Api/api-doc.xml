@@ -10,6 +10,7 @@
             </summary>
             <response code="200">Retorna com sucesso os dados</response>
             <response code="401">Retorna requisição não autorizada</response>
+            <response code="404">Retorna requisição sem dados</response>
         </member>
         <member name="M:BlazorShop.Api.Controllers.CarrinhoController.GetObterPorId(System.Int32)">
             <summary>

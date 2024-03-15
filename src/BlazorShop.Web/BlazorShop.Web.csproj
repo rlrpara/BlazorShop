@@ -6,4 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\imagens\calcados\" />
+    <Folder Include="wwwroot\imagens\beleza\" />
+    <Folder Include="wwwroot\imagens\eletronicos\" />
+    <Folder Include="wwwroot\imagens\moveis\" />
+    <Folder Include="wwwroot\imagens\alimento\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorShop.ServiceWeb\BlazorShop.ServiceWeb.csproj" />
+  </ItemGroup>
+
 </Project>
